@@ -11,9 +11,8 @@ function Calculator() {
 
   const handleClick = (value) => {
     if (!isNaN(value) || value === ".") {
-      if (currentValue === "0" && value === "0") return; // Prevent multiple leading zeros
+      if (currentValue === "0" && value === "0") return; 
       if (currentValue === "0" && value !== ".") {
-        // Replace leading zero with new digit
         setDisplay(value.toString());
         setCurrentValue(value.toString());
       } else {
